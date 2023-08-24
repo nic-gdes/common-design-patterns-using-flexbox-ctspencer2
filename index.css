@@ -1,0 +1,135 @@
+h2 {
+    margin-left: 2%;
+}
+
+.child {
+    background-color: red;
+    box-sizing: border-box;
+    border: 3px solid rgb(119, 8, 8);
+    border-radius: 10px;
+}
+
+.flex {
+    margin-bottom: 5em;
+    max-width: 640px;
+    margin: auto;
+}
+
+
+/* Stretch All */
+.flex1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex1-child {
+    height: 100px;
+    flex-grow: 1;
+}
+
+.flex1-child + .flex1-child {
+    margin-left: 2%;
+}
+
+
+/* Horizontal Bars */
+
+.flex2 {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: space-between;
+}
+
+.flex2-child {
+    height: 14%;
+}
+
+.flex2-child:nth-child(1) {
+    width: 25%;
+}
+
+.flex2-child:nth-child(2) {
+    width: 32%;
+}
+
+.flex2-child:nth-child(3) {
+    width: 75%;
+}
+
+.flex2-child:nth-child(4) {
+    width: 50%;
+}
+
+.flex2-child:nth-child(5) {
+    width: 15%;
+}
+
+.flex2-child:nth-child(6) {
+    width: 64%;
+}
+
+/* Masonry */
+
+.flex3 {
+    display: flex;
+    align-content: space-between;
+    height: 580px;
+    flex-flow: column wrap;
+}
+
+.flex3-child {
+    width: 32%;
+    padding: 10px;
+    height: 100px;
+    margin-bottom: 2%;
+}
+
+
+.flex3-child:nth-child(3n+1) { order: 1; }
+.flex3-child:nth-child(3n+2) { order: 2; }
+.flex3-child:nth-child(3n) { order: 3; }
+
+.flex3-child:nth-child(1) { height: 30%;}
+.flex3-child:nth-child(2) { height: 20%;}
+.flex3-child:nth-child(3) { height: 16%;}
+.flex3-child:nth-child(4) { height: 15%;}
+.flex3-child:nth-child(5) { height: 16%;}
+.flex3-child:nth-child(5) { height: 16%;}
+.flex3-child:nth-child(6) { height: 16%;}
+.flex3-child:nth-child(7) { height: 15%;}
+.flex3-child:nth-child(8) { height: 16%;}
+.flex3-child:nth-child(9) { height: 16%;}
+.flex3-child:nth-child(10) { height: 5%;}
+
+
+.flex3::before,
+.flex3::after {
+  content: "";
+  flex-basis: 100%;
+  width: 0;
+  order: 2;
+}
+
+
+/* Alternating Grid */
+.flex4 {
+    display: flex;
+    height: 580px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.flex4-child {
+    height: 33%;
+    width: 49%;
+    margin-bottom: 2%;
+}
+
+.flex4-child:nth-child(3n) {width: 100%;}
+
+
+
+
+
